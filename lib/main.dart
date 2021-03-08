@@ -34,6 +34,16 @@ class _MyAppState extends State<MyApp> {
                 controller: null,
                 keyboardType: TextInputType.number,
               ),
+              Container(
+                width: double.infinity,
+                height: 50,
+                child: RaisedButton(
+                  onPressed: null,
+                  color: Colors.blue,
+                  textColor: Colors.white,
+                  child: Text("Konversi Suhu"),
+                ),
+              ),
             ],
           ),
         ),
