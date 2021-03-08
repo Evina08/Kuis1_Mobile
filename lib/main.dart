@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'inputSisi.dart';
 import 'resultLuas.dart';
+import 'convertLuas.dart';
 
 void main() {
   runApp(MyApp());
@@ -51,16 +52,7 @@ class _MyAppState extends State<MyApp> {
           child: Column(
             children: [
               InputSisi(etSisi: etSisi),
-              Container(
-                width: double.infinity,
-                height: 50,
-                child: RaisedButton(
-                  onPressed: _hitungLuas,
-                  color: Colors.blue,
-                  textColor: Colors.white,
-                  child: Text("Konversi Suhu"),
-                ),
-              ),
+              ConvertLuas(hitungLuas: _hitungLuas),
               ResultLuas(result: _result),
               // );
             ],
