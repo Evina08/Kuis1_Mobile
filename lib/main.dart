@@ -18,6 +18,20 @@ class _MyAppState extends State<MyApp> {
   double _result = 0;
   double _inputSisi = 0;
 
+  var listItem = ["Persegi", "Persegi Panjang", "Segitiga"];
+  void _hitungLuas() {
+    setState(() {
+      _inputSisi = double.parse(etSisi.text);
+      if (_newValue == "Persegi")
+        _result = _inputSisi * _inputSisi;
+      else if (_newValue == "Persegi Panjang")
+        _result = _inputSisi;
+      else
+        _result = _inputSisi;
+      listViewItem.add("$_newValue : $_result");
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
