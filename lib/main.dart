@@ -16,6 +16,11 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   TextEditingController etSisi = new TextEditingController();
+  TextEditingController etPanjang = new TextEditingController();
+  TextEditingController etLebar = new TextEditingController();
+  TextEditingController etAlas = new TextEditingController();
+  TextEditingController etTinggi = new TextEditingController();
+
   List<String> listViewItem = List<String>();
   String _newValue = "Persegi";
   double _result = 0;
