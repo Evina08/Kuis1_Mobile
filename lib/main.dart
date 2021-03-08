@@ -58,7 +58,7 @@ class _MyAppState extends State<MyApp> {
                 width: double.infinity,
                 height: 50,
                 child: RaisedButton(
-                  onPressed: null,
+                  onPressed: _hitungLuas,
                   color: Colors.blue,
                   textColor: Colors.white,
                   child: Text("Konversi Suhu"),
@@ -74,7 +74,7 @@ class _MyAppState extends State<MyApp> {
                       style: TextStyle(fontSize: 20),
                     ),
                     Text(
-                      "",
+                      _result.toStringAsFixed(1),
                       style: TextStyle(fontSize: 30),
                     )
                   ],
