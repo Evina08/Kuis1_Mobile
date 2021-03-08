@@ -15,6 +15,7 @@ class _MyAppState extends State<MyApp> {
   TextEditingController etSisi = new TextEditingController();
 
   double _inputSisi = 0;
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -34,7 +35,7 @@ class _MyAppState extends State<MyApp> {
               TextFormField(
                 decoration: InputDecoration(hintText: "Masukkan Sisi"),
                 inputFormatters: [FilteringTextInputFormatter.digitsOnly],
-                controller: null,
+                controller: etSisi,
                 keyboardType: TextInputType.number,
               ),
               Container(
