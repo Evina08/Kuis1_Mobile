@@ -52,6 +52,21 @@ class _MyAppState extends State<MyApp> {
           child: Column(
             children: [
               InputSisi(etSisi: etSisi),
+              DropdownButton<String>(
+                items: listItem.map((String value) {
+                  return DropdownMenuItem<String>(
+                    value: value,
+                    child: Text(value),
+                  );
+                }).toList(),
+                value: _newValue,
+                onChanged: (String changeValue) {
+                  setState(() {
+                    _newValue = changeValue;
+                    // _hitungLuas();
+                  });
+                },
+              ),
               ConvertLuas(hitungLuas: _hitungLuas),
               ResultLuas(result: _result),
               // );
