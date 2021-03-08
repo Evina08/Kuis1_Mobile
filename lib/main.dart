@@ -34,12 +34,16 @@ class _MyAppState extends State<MyApp> {
   void _hitungLuas() {
     setState(() {
       _inputSisi = double.parse(etSisi.text);
+      _inputPanjang = double.parse(etPanjang.text);
+      _inputLebar = double.parse(etLebar.text);
+      _inputAlas = double.parse(etAlas.text);
+      _inputTinggi = double.parse(etTinggi.text);
       if (_newValue == "Persegi")
         _result = _inputSisi * _inputSisi;
       else if (_newValue == "Persegi Panjang")
-        _result = _inputSisi;
+        _result = _inputPanjang * _inputLebar;
       else
-        _result = _inputSisi;
+        _result = 1 / 2 * (_inputAlas + _inputTinggi);
       listViewItem.add("$_newValue : $_result");
     });
   }
