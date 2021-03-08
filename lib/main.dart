@@ -27,7 +27,14 @@ class _MyAppState extends State<MyApp> {
         body: Container(
           margin: EdgeInsets.all(8),
           child: Column(
-            children: [],
+            children: [
+              TextFormField(
+                decoration: InputDecoration(hintText: "Masukkan Sisi"),
+                inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+                controller: null,
+                keyboardType: TextInputType.number,
+              ),
+            ],
           ),
         ),
       ),
