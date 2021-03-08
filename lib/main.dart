@@ -13,7 +13,9 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   TextEditingController etSisi = new TextEditingController();
-
+  List<String> listViewItem = List<String>();
+  String _newValue = "Persegi";
+  double _result = 0;
   double _inputSisi = 0;
 
   @override
