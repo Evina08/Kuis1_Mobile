@@ -4,6 +4,7 @@ import 'inputSisi.dart';
 import 'inputLebar.dart';
 import 'inputPanjang.dart';
 import 'inputAlas.dart';
+import 'inputTinggi.dart';
 import 'resultLuas.dart';
 import 'convertLuas.dart';
 
@@ -71,6 +72,7 @@ class _MyAppState extends State<MyApp> {
               InputPanjang(etPanjang: etPanjang),
               InputLebar(etLebar: etLebar),
               InputAlas(etAlas: etAlas),
+              InputTinggi(etTinggi: etTinggi),
               DropdownButton<String>(
                 items: listItem.map((String value) {
                   return DropdownMenuItem<String>(
