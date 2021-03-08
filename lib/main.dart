@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'inputSisi.dart';
 
 void main() {
   runApp(MyApp());
@@ -48,12 +49,7 @@ class _MyAppState extends State<MyApp> {
           margin: EdgeInsets.all(8),
           child: Column(
             children: [
-              TextFormField(
-                decoration: InputDecoration(hintText: "Masukkan Sisi"),
-                inputFormatters: [FilteringTextInputFormatter.digitsOnly],
-                controller: etSisi,
-                keyboardType: TextInputType.number,
-              ),
+              InputSisi(etSisi: etSisi),
               Container(
                 width: double.infinity,
                 height: 50,
