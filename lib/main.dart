@@ -24,6 +24,10 @@ class _MyAppState extends State<MyApp> {
   List<String> listViewItem = List<String>();
   String _newValue = "Persegi";
   double _result = 0;
+  double _inputPanjang = 0;
+  double _inputLebar = 0;
+  double _inputAlas = 0;
+  double _inputTinggi = 0;
   double _inputSisi = 0;
 
   var listItem = ["Persegi", "Persegi Panjang", "Segitiga"];
