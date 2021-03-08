@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'inputSisi.dart';
+import 'inputLebar.dart';
 import 'inputPanjang.dart';
 import 'resultLuas.dart';
 import 'convertLuas.dart';
@@ -67,6 +68,7 @@ class _MyAppState extends State<MyApp> {
             children: [
               InputSisi(etSisi: etSisi),
               InputPanjang(etPanjang: etPanjang),
+              InputLebar(etLebar: etLebar),
               DropdownButton<String>(
                 items: listItem.map((String value) {
                   return DropdownMenuItem<String>(
