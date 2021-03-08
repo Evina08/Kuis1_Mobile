@@ -44,6 +44,23 @@ class _MyAppState extends State<MyApp> {
                   child: Text("Konversi Suhu"),
                 ),
               ),
+              Container(
+                margin: EdgeInsets.only(top: 20, bottom: 20),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      "Luas",
+                      style: TextStyle(fontSize: 20),
+                    ),
+                    Text(
+                      "",
+                      style: TextStyle(fontSize: 30),
+                    )
+                  ],
+                ),
+              ),
+              // );
             ],
           ),
         ),
