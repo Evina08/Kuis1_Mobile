@@ -13,6 +13,8 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   TextEditingController etSisi = new TextEditingController();
+
+  double _inputSisi = 0;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
