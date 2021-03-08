@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'inputSisi.dart';
+import 'resultLuas.dart';
 
 void main() {
   runApp(MyApp());
@@ -60,22 +61,7 @@ class _MyAppState extends State<MyApp> {
                   child: Text("Konversi Suhu"),
                 ),
               ),
-              Container(
-                margin: EdgeInsets.only(top: 20, bottom: 20),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      "Luas",
-                      style: TextStyle(fontSize: 20),
-                    ),
-                    Text(
-                      _result.toStringAsFixed(1),
-                      style: TextStyle(fontSize: 30),
-                    )
-                  ],
-                ),
-              ),
+              ResultLuas(result: _result),
               // );
             ],
           ),
