@@ -8,6 +8,7 @@ import 'inputTinggi.dart';
 import 'resultLuas.dart';
 import 'resultKeliling.dart';
 import 'convertLuas.dart';
+import 'convertKeliling.dart';
 
 void main() {
   runApp(MyApp());
@@ -34,7 +35,7 @@ class _MyAppState extends State<MyApp> {
   double _inputAlas = 0;
   double _inputTinggi = 0;
   double _inputSisi = 0;
-
+  double _resultKeliling = 0;
   var listItem = ["Persegi", "Persegi Panjang", "Segitiga"];
   void _hitungLuas() {
     setState(() {
@@ -49,6 +50,23 @@ class _MyAppState extends State<MyApp> {
         _result = _inputPanjang * _inputLebar;
       else
         _result = 1 / 2 * (_inputAlas + _inputTinggi);
+      listViewItem.add("$_newValue : $_result");
+    });
+  }
+
+  void _hitungKeliling() {
+    setState(() {
+      _inputSisi = double.parse(etSisi.text);
+      _inputPanjang = double.parse(etPanjang.text);
+      _inputLebar = double.parse(etLebar.text);
+      _inputAlas = double.parse(etAlas.text);
+      _inputTinggi = double.parse(etTinggi.text);
+      if (_newValue == "Persegi")
+        _resultKeliling = 4 * _inputSisi;
+      else if (_newValue == "Persegi Panjang")
+        _resultKeliling = 2 * (_inputPanjang + _inputLebar);
+      else
+        _resultKeliling = 1 / 2 * (_inputAlas + _inputTinggi);
       listViewItem.add("$_newValue : $_result");
     });
   }
@@ -106,7 +124,8 @@ class _MyAppState extends State<MyApp> {
                 onChanged: (String changeValue) {
                   setState(() {
                     _newValue = changeValue;
-                    // _hitungLuas();
+                    _hitungLuas();
+                    _hitungKeliling();
                   });
                 },
               ),
@@ -116,11 +135,20 @@ class _MyAppState extends State<MyApp> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
                     ResultLuas(result: _result),
-                    ResultKeliling(result: _result)
+                    ResultKeliling(resultKel: _resultKeliling)
                   ],
                 ),
               ),
-              ConvertLuas(hitungLuas: _hitungLuas),
+              Expanded(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: <Widget>[
+                    ConvertLuas(hitungLuas: _hitungLuas),
+                    ConvertKeliling(hitungKeliling: _hitungKeliling),
+                  ],
+                ),
+              ),
+              // ConvertLuas(hitungLuas: _hitungLuas),
             ],
           ),
         ),
