@@ -6,6 +6,7 @@ import 'inputPanjang.dart';
 import 'inputAlas.dart';
 import 'inputTinggi.dart';
 import 'resultLuas.dart';
+import 'resultKeliling.dart';
 import 'convertLuas.dart';
 
 void main() {
@@ -55,7 +56,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Belajar Bangun Datar',
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
         visualDensity: VisualDensity.adaptivePlatformDensity,
@@ -68,9 +69,30 @@ class _MyAppState extends State<MyApp> {
           margin: EdgeInsets.all(8),
           child: Column(
             children: [
+              Container(
+                child: Text(
+                  'Persegi : sisi x sisi',
+                  style: TextStyle(fontSize: 17),
+                  textAlign: TextAlign.center,
+                ),
+              ),
               InputSisi(etSisi: etSisi),
+              Container(
+                child: Text(
+                  'Persegi Panjang : panjang x lebar',
+                  style: TextStyle(fontSize: 17),
+                  textAlign: TextAlign.center,
+                ),
+              ),
               InputPanjang(etPanjang: etPanjang),
               InputLebar(etLebar: etLebar),
+              Container(
+                child: Text(
+                  'Segitiga : 1/2 x (alas + tinggi)',
+                  style: TextStyle(fontSize: 17),
+                  textAlign: TextAlign.center,
+                ),
+              ),
               InputAlas(etAlas: etAlas),
               InputTinggi(etTinggi: etTinggi),
               DropdownButton<String>(
@@ -88,9 +110,17 @@ class _MyAppState extends State<MyApp> {
                   });
                 },
               ),
+              // ResultLuas(result: _result),
+              Expanded(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: <Widget>[
+                    ResultLuas(result: _result),
+                    ResultKeliling(result: _result)
+                  ],
+                ),
+              ),
               ConvertLuas(hitungLuas: _hitungLuas),
-              ResultLuas(result: _result),
-              // );
             ],
           ),
         ),

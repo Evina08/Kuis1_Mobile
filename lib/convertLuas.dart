@@ -11,9 +11,9 @@ class ConvertLuas extends StatelessWidget {
       height: 50,
       child: RaisedButton(
         onPressed: hitungLuas,
-        color: Colors.blue,
+        color: Colors.indigo[400],
         textColor: Colors.white,
-        child: Text("Konversi Suhu"),
+        child: Text("Hitung Luas!"),
       ),
     );
   }
