@@ -8,6 +8,6 @@
 - Persegi
 - ![gambar 1](image/img1.jpg)
 - Persegi Panjang
-- ![gambar 1](image/img2.jpeg)
+- ![gambar 1](image/img2.jpg)
 - Segitiga
-- ![gambar 1](image/img3.jpeg)
+- ![gambar 1](image/img3.jpg)
