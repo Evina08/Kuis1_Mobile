@@ -12,10 +12,19 @@ class InputSisi extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      decoration: InputDecoration(hintText: "Masukkan Sisi"),
-      inputFormatters: [FilteringTextInputFormatter.digitsOnly],
-      controller: etSisi,
       keyboardType: TextInputType.number,
+      inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+      decoration: InputDecoration(
+          hintText: "Masukkan Sisi",
+          labelText: "Sisi",
+          border: OutlineInputBorder()),
+      validator: (String value) {
+        if (value.isEmpty) {
+          return "Sisi belum diisi";
+        }
+        return null;
+      },
+      controller: etSisi,
     );
   }
 }

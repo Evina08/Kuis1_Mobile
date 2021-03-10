@@ -11,10 +11,19 @@ class InputTinggi extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      decoration: InputDecoration(hintText: "Masukkan Tinggi"),
-      inputFormatters: [FilteringTextInputFormatter.digitsOnly],
-      controller: etTinggi,
       keyboardType: TextInputType.number,
+      inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+      decoration: InputDecoration(
+          hintText: "Masukkan Tinggi",
+          labelText: "Tinggi",
+          border: OutlineInputBorder()),
+      validator: (String value) {
+        if (value.isEmpty) {
+          return "Tinggi belum diisi";
+        }
+        return null;
+      },
+      controller: etTinggi,
     );
   }
 }

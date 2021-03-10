@@ -81,7 +81,7 @@ class _MyAppState extends State<MyApp> {
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Perhitungan Luas"),
+          title: Text("Perhitungan Luas dan Keliling"),
         ),
         body: Container(
           margin: EdgeInsets.all(8),
@@ -89,7 +89,7 @@ class _MyAppState extends State<MyApp> {
             children: [
               Container(
                 child: Text(
-                  'Persegi : sisi x sisi',
+                  'Persegi',
                   style: TextStyle(fontSize: 17),
                   textAlign: TextAlign.center,
                 ),
@@ -97,7 +97,7 @@ class _MyAppState extends State<MyApp> {
               InputSisi(etSisi: etSisi),
               Container(
                 child: Text(
-                  'Persegi Panjang : panjang x lebar',
+                  'Persegi Panjang',
                   style: TextStyle(fontSize: 17),
                   textAlign: TextAlign.center,
                 ),
@@ -106,7 +106,7 @@ class _MyAppState extends State<MyApp> {
               InputLebar(etLebar: etLebar),
               Container(
                 child: Text(
-                  'Segitiga : 1/2 x (alas + tinggi)',
+                  'Segitiga ',
                   style: TextStyle(fontSize: 17),
                   textAlign: TextAlign.center,
                 ),

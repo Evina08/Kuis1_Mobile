@@ -11,10 +11,19 @@ class InputPanjang extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      decoration: InputDecoration(hintText: "Masukkan Panjang"),
-      inputFormatters: [FilteringTextInputFormatter.digitsOnly],
-      controller: etPanjang,
       keyboardType: TextInputType.number,
+      inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+      decoration: InputDecoration(
+          hintText: "Masukkan Panjang",
+          labelText: "Panjang",
+          border: OutlineInputBorder()),
+      validator: (String value) {
+        if (value.isEmpty) {
+          return "Panjang belum diisi";
+        }
+        return null;
+      },
+      controller: etPanjang,
     );
   }
 }

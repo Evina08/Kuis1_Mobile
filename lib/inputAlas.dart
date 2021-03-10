@@ -11,10 +11,19 @@ class InputAlas extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      decoration: InputDecoration(hintText: "Masukkan Alas"),
-      inputFormatters: [FilteringTextInputFormatter.digitsOnly],
-      controller: etAlas,
       keyboardType: TextInputType.number,
+      inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+      decoration: InputDecoration(
+          hintText: "Masukkan Alas",
+          labelText: "Alas",
+          border: OutlineInputBorder()),
+      validator: (String value) {
+        if (value.isEmpty) {
+          return "Alas belum diisi";
+        }
+        return null;
+      },
+      controller: etAlas,
     );
   }
 }

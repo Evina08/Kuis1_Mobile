@@ -11,10 +11,19 @@ class InputLebar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      decoration: InputDecoration(hintText: "Masukkan Lebar"),
-      inputFormatters: [FilteringTextInputFormatter.digitsOnly],
-      controller: etLebar,
       keyboardType: TextInputType.number,
+      inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+      decoration: InputDecoration(
+          hintText: "Masukkan Lebar",
+          labelText: "Lebar",
+          border: OutlineInputBorder()),
+      validator: (String value) {
+        if (value.isEmpty) {
+          return "Lebar belum diisi";
+        }
+        return null;
+      },
+      controller: etLebar,
     );
   }
 }
