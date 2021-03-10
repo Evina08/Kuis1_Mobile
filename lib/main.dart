@@ -66,7 +66,7 @@ class _MyAppState extends State<MyApp> {
       else if (_newValue == "Persegi Panjang")
         _resultKeliling = 2 * (_inputPanjang + _inputLebar);
       else
-        _resultKeliling = 1 / 2 * (_inputAlas + _inputTinggi);
+        _resultKeliling = _inputSisi + _inputAlas + _inputTinggi;
       listViewItem.add("$_newValue : $_result");
     });
   }
