@@ -6,8 +6,8 @@
 - NIM : 1931710072
 
 - Persegi
-- ![gambar 1](image/image1.jpg)
+- ![gambar 1](image/img1.jpg)
 - Persegi Panjang
-- ![gambar 1](image/image2.jpeg)
+- ![gambar 1](image/img2.jpeg)
 - Segitiga
-- ![gambar 1](image/image3.jpeg)
+- ![gambar 1](image/img3.jpeg)
